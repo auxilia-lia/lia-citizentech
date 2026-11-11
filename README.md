@@ -1,2 +1,5 @@
-# lia-citizentech
-Lia — CitizenTech da equipe AuxiLia (Global Solution 2026.2, FIAP)
+## Estrutura do repositório
+
+| Pasta | O que tem |
+|---|---|
+| `network/` | Rede do Ponto Lia no CRAS Planalto (Packet Tracer), planta ilustrativa e relatório em PDF |
