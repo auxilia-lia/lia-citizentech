@@ -4,7 +4,13 @@ import br.com.fiap.lia.aplicacao.*;
 import br.com.fiap.lia.dominio.Acao;
 import br.com.fiap.lia.dominio.Canal;
 import br.com.fiap.lia.dominio.Pedido;
+import br.com.fiap.lia.dominio.Consentimento;
+import br.com.fiap.lia.dominio.Familiar;
+import br.com.fiap.lia.dominio.Finalidade;
+import br.com.fiap.lia.dominio.Parentesco;
+import br.com.fiap.lia.dominio.Usuario;
 
+import java.time.LocalDateTime;
 import java.util.Map;
 
 /**
@@ -21,18 +27,25 @@ public class Main {
     private static final PoliticaDeConfirmacao POLITICA = new PoliticaDeConfirmacao();
     private static final Pseudonimizador PSEUDONIMIZADOR = new Pseudonimizador();
     private static final GestorDeAutonomia AUTONOMIA = new GestorDeAutonomia();
+    private static Usuario usuario;
 
     private Main() {
     }
 
     /**
-     * Roda os 4 casos e os extras de autonomia e pseudonimização.
+     * Roda os 4 casos e os extras de autonomia, pseudonimização e consentimento.
      *
      * @param args não usado
      */
 
     public static void main(String[] args) {
         System.out.println("=== Núcleo da Lia: 4 casos, sem servidor e sem IA ===");
+
+        usuario = new Usuario(1L, "Dona Maria", 1952);
+        usuario.adicionarFamiliar(new Familiar(1L, "Júnior", Parentesco.FILHO, true));
+        usuario.registrarConsentimento(new Consentimento(1L, Finalidade.USO_IA_NUVEM, true, "v1", LocalDateTime.now()));
+        System.out.println("Atendendo: " + usuario.getNomePreferido() + ", " + usuario.getIdade() + " anos" +
+                " | familiar de confiança: " + usuario.getFamiliares().get(0).getApelido() + " | autorizou o uso de IA: " + usuario.aceitou(Finalidade.USO_IA_NUVEM));
 
         System.out.println("\n--- Caso 1: consulta ---");
         atender("quero ver meu dinheiro do INSS", Canal.LIGACAO, Map.of("tipo", "consultar_beneficio"));
@@ -56,6 +69,10 @@ public class Main {
 
         System.out.println("\n--- Extra: CPF escondido antes de ir para a IA ---");
         atender("meu cpf é 123.456.789-00, vê meu benefício", Canal.LIGACAO, Map.of("tipo", "consultar_beneficio"));
+
+        System.out.println("\n--- Extra: Dona Maria retira a autorização (LGPD) ---");
+        usuario.registrarConsentimento(new Consentimento(2L, Finalidade.USO_IA_NUVEM, false, "v1", LocalDateTime.now()));
+        atender("quero ver meu dinheiro do INSS", Canal.LIGACAO, Map.of("tipo", "consultar_beneficio"));
     }
 
     /**
@@ -68,6 +85,12 @@ public class Main {
 
     private static void atender(String texto, Canal canal, Map<String, Object> respostaDaIa) {
         System.out.println("Pessoa (" + canal.getCodigo() + "): " + texto);
+
+        // Sem autorização nada vai para a IA
+        if (!usuario.aceitou(Finalidade.USO_IA_NUVEM)) {
+            System.out.println("Lia: Para entender o seu pedido, eu preciso da sua autorização" + " para usar a inteligência artificial. Você autoriza?");
+            return;
+        }
 
         // Para dados pessoais não irem para a IA
         String textoSeguro = PSEUDONIMIZADOR.pseudonimizar(texto);
