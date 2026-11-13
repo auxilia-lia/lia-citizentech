@@ -42,7 +42,7 @@ public class Progresso {
 
     public void registrarConclusao(boolean semAjuda) {
         if (semAjuda) {
-            vezesSemAjuda =+ 1;
+            vezesSemAjuda += 1;
         } else {
             vezesSemAjuda = 0;
         }
