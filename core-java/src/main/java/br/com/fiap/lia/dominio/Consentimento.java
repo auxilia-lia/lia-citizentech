@@ -1,7 +1,5 @@
 package br.com.fiap.lia.dominio;
 
-import org.springframework.cglib.core.Local;
-
 import java.time.LocalDateTime;
 import java.util.Objects;
 
