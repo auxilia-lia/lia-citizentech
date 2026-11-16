@@ -22,7 +22,7 @@ public class NucleoConfig {
     }
 
     /**
-     * Fábrica que transforma a resposta da IA em uma ação
+     * Fábrica que transforma a resposta da IA em uma ação.
      *
      * @return a fábrica, criada uma vez só
      */

@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * Resposta de {@code POST /nucleo/decidir}, no formato do contrato.
  *
  * <p>
- *     Exemplo: {@code {"risco": "MEDIO", "confirmacao": "SIM_OU_NAO", "nivel": 1, "fala_confirmacao": "Posso mandar para seu filho: \"Cheguei bem\"?"}}.
+ *     Exemplo: {@code {"risco": "MEDIO", "confirmacao": "SIM_OU_NAO", "nivel": 1, "fala_confirmacao": "Posso mandar para o seu filho: \"Cheguei bem\"?"}}.
  * </p>
  *
  * @param risco nível de risco da ação
