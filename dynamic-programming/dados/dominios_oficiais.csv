@@ -1,0 +1,16 @@
+dominio,servico,tipo
+gov.br,Portal gov.br,governo
+acesso.gov.br,Login da conta gov.br,governo
+meu.inss.gov.br,Meu INSS,governo
+cadunico.dataprev.gov.br,Consulta do Cadastro Único,governo
+bcb.gov.br,Banco Central do Brasil,governo
+mg.gov.br,Portal de Minas Gerais,governo
+detran.mg.gov.br,Detran de Minas Gerais,governo
+taiobeiras.mg.gov.br,Prefeitura de Taiobeiras,governo
+caixa.gov.br,Caixa Econômica Federal,banco
+bb.com.br,Banco do Brasil,banco
+bradesco.com.br,Bradesco,banco
+itau.com.br,Itaú,banco
+cemig.com.br,Cemig (conta de luz),servico
+copasa.com.br,Copasa (conta de água),servico
+correios.com.br,Correios,servico
