@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Ponto de entrada do servidor: sobe o Spring Boot com os endereços do núcleo na porta 8080.
  *
  * <p>
- *     Para ver os 4 casos sem servidor, roda a classe {@link Main}
+ *     Para ver os 4 casos sem servidor, roda a classe {@link Main}.
  * </p>
  */
 

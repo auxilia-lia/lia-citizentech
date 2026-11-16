@@ -7,7 +7,7 @@ import java.util.Objects;
  * Resposta da pessoa a um pedido de autorização de uso de dados (LGPD).
  *
  * <p>
- *     Uma resposta nunca muda: se a pessoa mudar de ideia, registra-se um novo consentimeto, e o mais recente é o que vale.
+ *     Uma resposta nunca muda: se a pessoa mudar de ideia, registra-se um novo consentimento, e o mais recente é o que vale.
  * </p>
  *
  * @param idConsentimento identificador do banco, ou {@code null} se ainda não foi salvo
