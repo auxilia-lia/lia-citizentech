@@ -1,7 +1,5 @@
-## Estrutura do repositório
+# lia-citizentech (arquivado)
 
-| Pasta | O que tem |
-|---|---|
-| `core-java/` | Núcleo da Lia em Java (Spring Boot): risco, confirmação, autonomia e pseudonimização. Veja o [README](core-java/README.md) |
-| `dynamic-programming/` | Distância de Levenshtein com programação dinâmica para o antigolpe e a busca tolerante a erro (notebook Python) |
-| `network/` | Rede do Ponto Lia no CRAS Planalto (Packet Tracer), planta ilustrativa e relatório em PDF |
+As entregas da equipe AuxiLia agora ficam no repositório único: https://github.com/auxilia-lia/lia-gs-citizentech
+
+O histórico deste repositório (core-java, dynamic-programming e network) foi levado para lá.
