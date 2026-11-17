@@ -1,0 +1,24 @@
+frase,acao
+ver meu benefício,consultar_beneficio
+benefício do inss,consultar_beneficio
+consultar aposentadoria,consultar_beneficio
+quanto caiu do inss,consultar_beneficio
+avisar meu filho,avisar_familiar
+avisar minha filha,avisar_familiar
+mandar mensagem para meu filho,avisar_familiar
+falar com minha filha,avisar_familiar
+agendar consulta,agendar_por_voz
+marcar médico,agendar_por_voz
+marcar consulta no posto,agendar_por_voz
+pagar boleto,pagar_boleto
+pagar conta de luz,pagar_boleto
+pagar conta de água,pagar_boleto
+ler essa carta,tirar_foto
+tirar foto do papel,tirar_foto
+ler a receita do médico,tirar_foto
+ver minhas multas,guiar
+me ajuda a marcar consulta no celular,guiar
+abrir o whatsapp,guiar_app
+mexer no celular,guiar_app
+pode parar,parar_guia
+já consegui,parar_guia
